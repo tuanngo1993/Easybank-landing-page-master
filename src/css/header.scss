@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    min-height: 80px;
+    z-index: 1;
+    position: relative;
+
+    &__nav {
+        flex-grow: 1;
+        min-height: inherit;
+
+        ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            gap: 30px;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            color: #9597A5;
+            min-height: inherit;
+        }
+
+        li {
+            min-height: inherit;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+
+            &:after {
+                position: absolute;
+                background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+                height: 4px;
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000;
+            }
+
+            &:hover {
+                &:after {
+                    content: ""
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.articles {
+    &__posts {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__post {
+        &-image {
+            margin-bottom: 25px;
+            img {
+                width: 100%;
+            }
+        }
+
+        &-author,
+        &-title,
+        &-content {
+            padding: 0 24px;
+        }
+
+        &-author {
+            color: #9597A5;
+            font-size: 10px;
+            margin-bottom: 8px;
+        }
+
+        &-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #2D314D;
+            line-height: 20px;
+        }
+
+        &-content {
+            color: #9597A5;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+}

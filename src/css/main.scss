@@ -1,0 +1,62 @@
+@import "normalize";
+@import "fonts";
+@import "header";
+@import "hero-image";
+@import "reasons";
+@import "articles";
+
+// General Style
+html {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+        -moz-box-sizing: inherit;
+            box-sizing: inherit;
+}
+
+.container {
+    padding-left: 165px;
+    padding-right: 165px;
+}
+
+// Button
+button {
+    height: 44px;
+    border: none;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    padding: 8px 34px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(to right, #ffffff66, #ffffff66), linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+    }
+}
+
+// Headline
+.headline {
+    h1 {
+        font-weight: 300;
+        font-size: 56px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        font-size: 18px;
+        color:#9597A5;
+        margin-bottom: 36px;
+        line-height: 28px;
+    }
+}
