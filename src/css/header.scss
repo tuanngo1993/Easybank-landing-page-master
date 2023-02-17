@@ -19,11 +19,8 @@
 
         ul {
             display: flex;
-            list-style: none;
             justify-content: center;
             gap: 30px;
-            padding: 0;
-            margin: 0;
             font-size: 14px;
             color: #9597A5;
             min-height: inherit;
@@ -33,7 +30,6 @@
             min-height: inherit;
             display: flex;
             align-items: center;
-            cursor: pointer;
             position: relative;
 
             &:after {
@@ -50,6 +46,58 @@
             &:hover {
                 &:after {
                     content: ""
+                }
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    li {
+        cursor: pointer;
+    }
+
+    &__popup-button {
+        height: 12px;
+        width: 20px;
+        background-image: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='10'%3E%3Cg fill='%232D314D' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z'/%3E%3C/g%3E%3C/svg%3E"), '#', '%23');
+        
+        &.close {
+            height: 20px;
+            background-image: str-replace(url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='19'%3E%3Cg fill='%232D314D' fill-rule='evenodd'%3E%3Cpath d='M.868.661l16.97 16.97-.706.708L.162 1.369z'/%3E%3Cpath d='M.161 17.632L17.131.662l.708.706-16.97 16.97z'/%3E%3C/g%3E%3C/svg%3E"), '#', '%23');
+        }
+    }
+
+    &__popup-list {
+        display: none;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, #2D2D4D, transparent);
+
+        &.show {
+            display: block;
+        }
+
+        &-container {
+            margin: 24px !important;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 32px !important;
+            text-align: center;
+
+            li {
+                color: #2D314D;
+
+                &:not(:last-child) {
+                    margin-bottom: 24px;
                 }
             }
         }
