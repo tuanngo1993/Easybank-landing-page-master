@@ -6,6 +6,13 @@
     z-index: 1;
     position: relative;
 
+    &__logo {
+        display: flex;
+        img {
+            height: 100%;
+        }
+    }
+
     &__nav {
         flex-grow: 1;
         min-height: inherit;
@@ -45,6 +52,24 @@
                     content: ""
                 }
             }
+        }
+    }
+
+    button:last-child {
+        display: none;
+    }
+
+    @media only screen and (max-width: 920px) {
+        min-height: 64px;
+        justify-content: space-between;
+
+        &__nav,
+        button:first-child {
+            display: none;
+        }
+
+        button:last-child {
+            display: inline-block;
         }
     }
 }

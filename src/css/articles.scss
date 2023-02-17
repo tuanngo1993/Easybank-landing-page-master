@@ -1,14 +1,25 @@
 .articles {
+    padding-top: 40px;
+    padding-bottom: 80px;
+    background-color: #FAFAFA;
+
     &__posts {
         display: flex;
         gap: 30px;
     }
 
     &__post {
+        background-color: #fff;
         &-image {
             margin-bottom: 25px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 5px 5px 0 0;
+
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
@@ -35,6 +46,18 @@
             color: #9597A5;
             font-size: 13px;
             line-height: 18px;
+            padding-bottom: 24px;
+        }
+    }
+
+    @media only screen and (max-width: 920px) {
+        &__posts {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__post {
+            max-width: 500px;
         }
     }
 }

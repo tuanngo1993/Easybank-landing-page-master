@@ -38,4 +38,44 @@
             }
         }
     }
+
+    @media only screen and (max-width: 920px) {
+        flex-direction: column;
+        overflow: hidden;
+
+        &__text {
+            order: 1;
+            margin: 40px 0 90px 0;
+        }
+
+        &__text,
+        &__image {
+            flex-grow: 1;
+            flex-basis: auto;
+            flex-shrink: 0;
+        }
+
+        &__image {
+            position: relative;
+            margin-top: -34%;
+    
+            img {
+                position: absolute;
+
+                &:first-child {
+                    left: -26%;
+                    top: auto;
+                    bottom: 0;
+                    width: 165%;
+                }
+    
+                &:last-child {
+                    top: auto;
+                    left: auto;
+                    position: relative;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
